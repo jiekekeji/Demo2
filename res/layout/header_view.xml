@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    tools:context="com.jk.demo2.MainActivity" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/light_blue"
+        android:gravity="center"
+        android:text="顶部内容" />
+
+</RelativeLayout>
