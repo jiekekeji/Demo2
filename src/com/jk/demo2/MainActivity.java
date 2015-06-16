@@ -6,7 +6,6 @@ import java.util.List;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
@@ -17,7 +16,6 @@ import com.jk.adapter.MyAdapter;
 import com.jk.view.LoadMoreListView;
 import com.jk.view.LoadMoreListView.OnLoadMoreListener;
 import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.util.LogUtils;
 import com.lidroid.xutils.view.annotation.ContentView;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
@@ -75,15 +73,12 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onScroll(AbsListView view, int firstVisibleItem,
 					int visibleItemCount, int totalItemCount) {
-				Log.i("totalItemCount", totalItemCount + "");
 				if (firstVisibleItem >= 1) {
-
 					navContainer1.removeView(navContent);
 					if (navContent.getParent() == null) {
 						navContainer2.addView(navContent,
 								LayoutParams.MATCH_PARENT, 60);
 					}
-					LogUtils.i("if");
 
 				} else {
 					navContainer2.removeView(navContent);
